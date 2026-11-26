@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Política de privacidad · Cuentame Motor Demo</title>
+<style>
+  :root { --text:#1f2933; --muted:#52606d; --line:#d9e2ec; --accent:#0b6e4f; --bg:#ffffff; }
+  @media (prefers-color-scheme: dark) { :root { --text:#e4e7eb; --muted:#9aa5b1; --line:#3e4c59; --accent:#3ebd93; --bg:#1f2933; } }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:1.6rem; margin:0 0 4px; }
+  h2 { font-size:1.15rem; margin:32px 0 8px; padding-top:8px; border-top:1px solid var(--line); }
+  p, li { color:var(--text); }
+  .meta { color:var(--muted); font-size:.95rem; margin:0 0 24px; }
+  .note { border-left:4px solid var(--accent); padding:8px 12px; background:rgba(11,110,79,.08); }
+  table { width:100%; border-collapse:collapse; font-size:.95rem; }
+  th, td { text-align:left; vertical-align:top; padding:8px; border-bottom:1px solid var(--line); }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Política de privacidad — Cuentame Motor Demo</h1>
+  <p class="meta">Vigente desde el 26 de noviembre de 2026 · Demo experimental, no es un servicio al público</p>
+
+  <p class="note">Esta política aplica <strong>solo</strong> al demo técnico «Cuentame Motor Demo»: una prueba de un motor conversacional sobre la API de WhatsApp Business de Meta. No es la política de privacidad de la plataforma Cuéntame ni de ningún servicio en producción.</p>
+
+  <h2>1. Qué es este demo y quién puede usarlo</h2>
+  <p>Es una prueba temporal para evaluar si un motor propio puede recibir mensajes de WhatsApp y responder con texto y botones, y más adelante comprobar un inicio de sesión contra un entorno de pruebas. Usa un número de prueba proporcionado por Meta, que solo puede conversar con un máximo de cinco números autorizados de forma expresa por el equipo del demo. No está abierto al público, no envía publicidad y no inicia conversaciones con personas que no lo hayan solicitado.</p>
+
+  <h2>2. Responsable y contacto</h2>
+  <p>El demo lo opera el equipo técnico que realiza la evaluación. Para cualquier pregunta o solicitud sobre tus datos escribe a <a href="mailto:daniel.fortis@sicuentame.com">daniel.fortis@sicuentame.com</a>.</p>
+
+  <h2>3. Datos que tratamos</h2>
+  <table>
+    <tr><th>Dato</th><th>Para qué</th><th>Cuánto tiempo</th></tr>
+    <tr><td>Tu número de WhatsApp (identificador de WhatsApp)</td><td>Saber a quién responder, mantener el orden de la conversación y comprobar que eres un número de prueba autorizado.</td><td>Solo en memoria mientras dura la conversación (se borra tras 15 minutos de inactividad o al reiniciar el motor).</td></tr>
+    <tr><td>El contenido de tus mensajes (texto y botones que eliges)</td><td>Decidir la respuesta del demo (por ejemplo, la palabra LOGIN o el botón «Iniciar sesión»).</td><td>No se guarda: se procesa en memoria y se descarta al responder.</td></tr>
+    <tr><td>Identificadores técnicos de los mensajes</td><td>Evitar procesar dos veces el mismo mensaje cuando Meta lo reenvía.</td><td>Hasta 24 horas, solo en memoria.</td></tr>
+    <tr><td>Registros técnicos (logs)</td><td>Diagnosticar errores y medir el funcionamiento.</td><td>En el equipo de pruebas hasta el final de la evaluación. No contienen el texto de tus mensajes, tu número ni contraseñas: tu número se reemplaza por un seudónimo irreversible.</td></tr>
+  </table>
+  <p>Meta también nos envía el nombre de tu perfil de WhatsApp junto con cada mensaje; el demo <strong>no lo usa ni lo guarda</strong>. El demo <strong>no solicita contraseñas</strong> por WhatsApp ni información sobre tu salud o bienestar.</p>
+
+  <h2>4. Etapa de inicio de sesión de prueba</h2>
+  <p>Solo cuando el equipo active esa etapa y únicamente para números autorizados para pruebas: al pulsar «Iniciar sesión», el demo consulta el entorno de <strong>pruebas</strong> (no el de producción) para comprobar si tu número está vinculado a una cuenta de prueba. Si lo está, recibe el identificador y el nombre de pila de esa cuenta de prueba y un token de sesión temporal, que se conservan en memoria un máximo de 15 minutos para responder «¡Hola, [Nombre]!». No se consultan cuentas reales.</p>
+
+  <h2>5. Con quién se comparten los datos</h2>
+  <ul>
+    <li><strong>Meta Platforms</strong>, que presta la API de WhatsApp Business y transporta los mensajes conforme a sus propias condiciones y política de privacidad.</li>
+    <li><strong>Cloudflare</strong>, que ofrece el túnel HTTPS cifrado por el que Meta entrega los mensajes al equipo de pruebas.</li>
+    <li>El <strong>entorno de pruebas</strong> del sistema de inicio de sesión, solo en la etapa descrita en la sección 4.</li>
+  </ul>
+  <p>No vendemos ni rentamos datos, no los usamos para publicidad, perfilamiento ni para entrenar modelos de inteligencia artificial.</p>
+
+  <h2>6. Seguridad</h2>
+  <p>Las comunicaciones viajan cifradas (HTTPS). El demo comprueba la firma criptográfica de cada aviso de Meta, solo atiende números de prueba autorizados, no guarda credenciales en su código y restringe sus herramientas internas al equipo local.</p>
+
+  <h2 id="eliminacion">7. Tus derechos y cómo eliminar tus datos</h2>
+  <p>Puedes pedir información sobre tus datos, su corrección o su eliminación escribiendo al correo de la sección 2. Como el demo no tiene una base de datos y lo que guarda en memoria desaparece en los plazos indicados, la eliminación consiste en borrar los registros técnicos relacionados con tu número; lo haremos en un plazo máximo de 30 días y te confirmaremos por el mismo medio. También puedes dejar de escribir al número de prueba o bloquearlo en WhatsApp en cualquier momento.</p>
+
+  <h2>8. Menores de edad</h2>
+  <p>El demo no está dirigido a menores de 18 años y solo lo usan personas adultas autorizadas por el equipo de pruebas.</p>
+
+  <h2>9. Cambios</h2>
+  <p>Si cambia el funcionamiento del demo actualizaremos esta página y su fecha de vigencia. Al terminar la evaluación, el demo se apagará y los registros técnicos se eliminarán.</p>
+</main>
+</body>
+</html>
